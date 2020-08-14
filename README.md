@@ -36,3 +36,9 @@ ready to be deployed!
 See the section about
 [deployment](https://facebook.github.io/create-react-app/docs/deployment) for
 more information.
+
+### `yarn storybook`
+
+Launches Storybook to explore the UI components<br />
+[Storybook](https://storybook.js.org/)
+for more information.
