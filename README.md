@@ -40,5 +40,8 @@ more information.
 ### `yarn storybook`
 
 Launches Storybook to explore the UI components<br />
+Open
+[http://localhost:6006](http://localhost:6006) to view it in the browser.
+
 [Storybook](https://storybook.js.org/)
 for more information.
