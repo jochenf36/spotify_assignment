@@ -1,0 +1,27 @@
+.container {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  list-style: none;
+}
+
+.cover {
+  border-radius: 50%;
+  padding: 1vw;
+  border: 1px solid gray;
+  width: 80px;
+  height: 80px;
+  margin-right: 5%;
+}
+
+.artist {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 10%;
+  max-width: 300px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
