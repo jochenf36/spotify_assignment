@@ -8,6 +8,7 @@ export interface ArtistCoverProps {
   name: string;
   image: string;
   clickedArtist: (id: string) => void;
+  isSelected: boolean;
 }
 
 export const ArtistCover: React.FC<ArtistCoverProps> = ({
@@ -15,15 +16,21 @@ export const ArtistCover: React.FC<ArtistCoverProps> = ({
   name,
   image,
   clickedArtist,
+  isSelected,
 }) => {
   function onCoverClick() {
     clickedArtist(id);
   }
 
   const cover = image === '' ? PLACEHOLDER_IMAGE : image;
+
+  const containerClass = [styles.container, isSelected && styles.selected].join(
+    ' '
+  );
+
   return (
     <li
-      className={styles.container}
+      className={containerClass}
       data-testid={`artist-${id}`}
       onClick={onCoverClick}
     >

@@ -2,10 +2,25 @@
   margin: 0 2%;
 }
 
+.header {
+  text-align: center;
+}
+
 .title {
   color: #98c379;
   font-size: calc(10px + 7vw);
   font-family: 'Amatic SC', cursive;
   margin-top: 2vw;
-  text-align: center;
+}
+
+.searchInput {
+  width: 50%;
+  padding: 15px 22px;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  margin-bottom: 2vw;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1vw;
 }
