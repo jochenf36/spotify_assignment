@@ -6,6 +6,18 @@ is searching for.
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Structure
+
+Due to the simplicity of the application, all components are stored within the **Components** folder.
+
+Bootstrapping of the application is done using the **index.tsx** file.
+
+## Tools used:
+
+- [Storybook](https://storybook.js.org/): Helps maintaining the UI Library
+- [Prettier](https://prettier.io/): Opinionated Code Formatter
+- [ApolloGraphl](https://www.apollographql.com/) Industry-standard GraphQL implementation
+
 ## Available Scripts
 
 In the project directory, you can run:
