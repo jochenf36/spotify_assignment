@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spotify_assignment/static/css/main.1844fc94.chunk.css",
+    "main.js": "/spotify_assignment/static/js/main.807502be.chunk.js",
+    "main.js.map": "/spotify_assignment/static/js/main.807502be.chunk.js.map",
+    "runtime-main.js": "/spotify_assignment/static/js/runtime-main.7d206945.js",
+    "runtime-main.js.map": "/spotify_assignment/static/js/runtime-main.7d206945.js.map",
+    "static/js/2.59d30fe8.chunk.js": "/spotify_assignment/static/js/2.59d30fe8.chunk.js",
+    "static/js/2.59d30fe8.chunk.js.map": "/spotify_assignment/static/js/2.59d30fe8.chunk.js.map",
+    "index.html": "/spotify_assignment/index.html",
+    "precache-manifest.74f43011b7ec364cec7390653aebe876.js": "/spotify_assignment/precache-manifest.74f43011b7ec364cec7390653aebe876.js",
+    "service-worker.js": "/spotify_assignment/service-worker.js",
+    "static/css/main.1844fc94.chunk.css.map": "/spotify_assignment/static/css/main.1844fc94.chunk.css.map",
+    "static/js/2.59d30fe8.chunk.js.LICENSE.txt": "/spotify_assignment/static/js/2.59d30fe8.chunk.js.LICENSE.txt",
+    "static/media/rings.svg": "/spotify_assignment/static/media/rings.d86931f4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d206945.js",
+    "static/js/2.59d30fe8.chunk.js",
+    "static/css/main.1844fc94.chunk.css",
+    "static/js/main.807502be.chunk.js"
+  ]
+}
