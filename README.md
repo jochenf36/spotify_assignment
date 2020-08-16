@@ -16,7 +16,7 @@ Bootstrapping of the application is done using the **index.tsx** file.
 
 - [Storybook](https://storybook.js.org/): Helps maintaining the UI Library
 - [Prettier](https://prettier.io/): Opinionated Code Formatter
-- [ApolloGraphl](https://www.apollographql.com/) Industry-standard GraphQL implementation
+- [ApolloGraphql](https://www.apollographql.com/) Industry-standard GraphQL implementation
 
 ## Available Scripts
 
@@ -54,6 +54,3 @@ more information.
 Launches Storybook to explore the UI components<br />
 Open
 [http://localhost:6006](http://localhost:6006) to view it in the browser.
-
-[Storybook](https://storybook.js.org/)
-for more information.
