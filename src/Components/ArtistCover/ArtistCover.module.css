@@ -1,0 +1,25 @@
+.container {
+  margin: 10px;
+  list-style: none;
+  width: 400px;
+}
+
+.cover {
+  border-radius: 50%;
+  border: 1px solid gray;
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.title {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30px;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
