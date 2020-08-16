@@ -9,19 +9,23 @@ export interface ArtistsOverviewProps {
 }
 
 export const ArtistsOverview: React.FC<ArtistsOverviewProps> = ({
-  artists,
+  artists = [],
   clickedArtist,
 }) => (
   <>
     <h2 className={styles.title}>Artists</h2>
-    <ul className={styles.artists}>
-      {artists.map((artist) => (
-        <ArtistCover
-          key={artist.id}
-          {...artist}
-          clickedArtist={clickedArtist}
-        />
-      ))}
-    </ul>
+    {artists.length > 0 ? (
+      <ul className={styles.artists}>
+        {artists.map((artist) => (
+          <ArtistCover
+            key={artist.id}
+            {...artist}
+            clickedArtist={clickedArtist}
+          />
+        ))}
+      </ul>
+    ) : (
+      <div>No results Found</div>
+    )}
   </>
 );

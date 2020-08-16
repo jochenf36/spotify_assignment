@@ -8,13 +8,19 @@ export interface AlbumsOverviewProps {
   albums: albums;
 }
 
-export const AlbumsOverview: React.FC<AlbumsOverviewProps> = ({ albums }) => (
+export const AlbumsOverview: React.FC<AlbumsOverviewProps> = ({
+  albums = [],
+}) => (
   <>
     <h2 className={styles.title}>Albums</h2>
-    <ul className={styles.albums}>
-      {albums.map((album) => (
-        <AlbumCover {...album} key={album.id} />
-      ))}
-    </ul>
+    {albums.length > 0 ? (
+      <ul className={styles.albums}>
+        {albums.map((album) => (
+          <AlbumCover {...album} key={album.id} />
+        ))}
+      </ul>
+    ) : (
+      <div>No results Found</div>
+    )}
   </>
 );
