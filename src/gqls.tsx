@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { Artist } from './App';
+import { Artist } from './Common/types';
 
 export interface ArtistsData {
   queryArtists: Artist[];

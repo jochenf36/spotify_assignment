@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ArtistsOverview.module.css';
 import { ArtistCover } from '../ArtistCover';
-import { Artist } from '../../App';
+import { Artist } from '../../Common/types';
 
 export interface ArtistsOverviewProps {
   artists: Artist[];

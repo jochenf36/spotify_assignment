@@ -5,23 +5,15 @@ import { AlbumsOverview } from './Components/AlbumsOverview';
 
 import { useQuery } from '@apollo/client';
 import { GET_ARTISTS, ArtistsVars, ArtistsData } from './gqls';
+import { Spinner } from './Components/Spinner';
+import { Artist } from './Common/types';
 
-export interface Artist {
-  id: string;
-  name: string;
-  image: string;
-  albums: Album[];
-}
-
-interface Album {
-  id: string;
-  name: string;
-  image: string;
-}
+const DEFAULT_KEYWORD = '';
 
 function App() {
-  const [keyword, setKeyword] = useState('Red');
+  const [keyword, setKeyword] = useState(DEFAULT_KEYWORD);
   const [selectedArtists, setSelectedArtists] = useState(0);
+
   const { loading, data = { queryArtists: [] } } = useQuery<
     ArtistsData,
     ArtistsVars
@@ -36,40 +28,49 @@ function App() {
     setSelectedArtists(index);
   }
 
-  function handleInput(event: ChangeEvent<HTMLInputElement>) {
+  function handleSearchInput(event: ChangeEvent<HTMLInputElement>) {
     setSelectedArtists(0);
     setKeyword(event.target.value);
   }
+
+  const ArtistsAndAlbums = () =>
+    keyword.length > 0 ? (
+      <>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            <ArtistsOverview
+              artists={data.queryArtists}
+              clickedArtist={changeArtist}
+              selectedArtist={selectedArtists}
+            />
+            <br />
+
+            <AlbumsOverview
+              albums={data.queryArtists[selectedArtists]?.albums}
+            />
+          </>
+        )}
+      </>
+    ) : null;
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Search Artists</h1>
         <input
+          aria-label="searchInput"
           type="text"
           id="searchInput"
           name="searchInput"
           placeholder="Enter a keyword"
           className={styles.searchInput}
           value={keyword}
-          onChange={handleInput}
+          onChange={handleSearchInput}
         />
       </header>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <ArtistsOverview
-          artists={data.queryArtists}
-          clickedArtist={changeArtist}
-          selectedArtist={selectedArtists}
-        />
-      )}
-      <br />
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <AlbumsOverview albums={data.queryArtists[selectedArtists]?.albums} />
-      )}
+      <ArtistsAndAlbums />
     </div>
   );
 }
