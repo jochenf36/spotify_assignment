@@ -7,16 +7,26 @@ export interface ArtistCoverProps {
   id: string;
   name: string;
   image: string;
+  clickedArtist: (id: string) => void;
 }
 
 export const ArtistCover: React.FC<ArtistCoverProps> = ({
   id,
   name,
   image,
+  clickedArtist,
 }) => {
+  function onCoverClick() {
+    clickedArtist(id);
+  }
+
   const cover = image === '' ? PLACEHOLDER_IMAGE : image;
   return (
-    <li className={styles.container} data-testid={`artist-${id}`}>
+    <li
+      className={styles.container}
+      data-testid={`artist-${id}`}
+      onClick={onCoverClick}
+    >
       <img
         className={styles.cover}
         src={cover}

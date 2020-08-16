@@ -1,7 +1,6 @@
 .albums {
-  margin: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  padding: 0;
+  padding-inline-start: 0px;
 }

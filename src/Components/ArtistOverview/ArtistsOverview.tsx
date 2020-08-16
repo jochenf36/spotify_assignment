@@ -1,21 +1,26 @@
 import React from 'react';
 import styles from './ArtistsOverview.module.css';
-import { ArtistCoverProps, ArtistCover } from '../ArtistCover';
-
-type artists = ArtistCoverProps[];
+import { ArtistCover } from '../ArtistCover';
+import { Artist } from '../../App';
 
 export interface ArtistsOverviewProps {
-  artists: artists;
+  artists: Artist[];
+  clickedArtist: (id: string) => void;
 }
 
 export const ArtistsOverview: React.FC<ArtistsOverviewProps> = ({
   artists,
+  clickedArtist,
 }) => (
   <>
     <h2 className={styles.title}>Artists</h2>
     <ul className={styles.artists}>
       {artists.map((artist) => (
-        <ArtistCover {...artist} key={artist.id} />
+        <ArtistCover
+          key={artist.id}
+          {...artist}
+          clickedArtist={clickedArtist}
+        />
       ))}
     </ul>
   </>
