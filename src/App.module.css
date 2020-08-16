@@ -10,7 +10,7 @@
   color: #98c379;
   font-size: calc(10px + 7vw);
   font-family: 'Amatic SC', cursive;
-  margin-top: 2vw;
+  margin-top: 5%;
 }
 
 .searchInput {
@@ -22,5 +22,20 @@
   margin-bottom: 2vw;
   background-color: transparent;
   color: #ffffff;
-  font-size: 1vw;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 380px) {
+  .container {
+    margin: 0 5%;
+  }
+
+  .searchInput {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .title {
+    margin-top: 10%;
+  }
 }
