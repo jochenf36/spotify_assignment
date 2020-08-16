@@ -24,7 +24,7 @@
   display: inline-block;
   vertical-align: top;
   padding-top: 30px;
-  width: 70%;
+  width: calc(100% - 120px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
