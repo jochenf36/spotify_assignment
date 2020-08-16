@@ -1,0 +1,21 @@
+.container {
+  margin: 10px;
+  list-style: none;
+  width: 400px;
+}
+
+.cover {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.title {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 15px;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
